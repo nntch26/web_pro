@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Learn PHP - Project</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+
+  <nav class="navbar navbar-cus navbar-expand-lg fixed-top">
+      <div class="container">
+
+        <a class="navbar-brand" href="index.html">PHP</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="intro.html">Introduction</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="install.html">Install</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="basic.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PHP Basic
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="basic.html">Syntax</a></li>
+                <li><a class="dropdown-item" href="basic.html">Echo/Print</a></li>
+                <li><a class="dropdown-item" href="basic.html">Variables</a></li>
+                <li><a class="dropdown-item" href="basic.html">Data Type</a></li>
+                <li><a class="dropdown-item" href="basic.html">Operator</a></li>
+                <li><a class="dropdown-item" href="basic.html">if...else Statement</a></li>
+                <li><a class="dropdown-item" href="basic.html">Loops</a></li>
+                <li><a class="dropdown-item" href="basic.html">Functions</a></li>
+                <li><a class="dropdown-item" href="basic.html">Arrays</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="advanced.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PHP Advanced
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="advanced.html">Sessions</a></li>
+                <li><a class="dropdown-item" href="advanced.html">GET/POST</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="reference.html">Reference</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+  </nav>
+
+   
+
+    <!-- Header -->
+
+  <div class="container-fuild">
+      <div class="header" id="home">
+          <div class="content-header">
+              <h1>Introduction</h1>
+              <h3>ในบทแรกของการเรียนภาษา PHP เราจะแนะนำให้คุณรู้จักกับภาษาในเบื้องต้น <br>รวมทั้งประวัติความเป็นมาและการพัฒนาของภาษา PHP</h3>
+              <a href="#intro"><button type="button" class="btn mt-5">Get Started</button></a>
+          </div>
+      </div>
+  </div>
+
+
+
+  <!-- Content -->
+
+<div class="section" id="intro">
+    <div class="container">
+        <div class="row">
+            <div class="head-text mb-5">
+                <h1>แนะนำภาษา PHP</h1>
+            </div>
+
+            <div class="col-md-6 content-left-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1280px-PHP-logo.svg.png" alt="" width="64" height="400">
+            </div>
+
+            <div class="col-md-6 content-right-text">
+                <h1>PHP คืออะไร</h1>
+                <p>PHP คือภาษาสำหรับทำงานด้านฝั่งของเซิร์ฟเวอร์ (server-side scripting) ถูกออกแบบมาสำหรับการพัฒนาเว็บไซต์ แต่มันก็ยังสามารถใช้เขียนโปรแกรมเพื่อวัตถุประสงค์ทั่วไปได้ PHP ถูกสร้างโดย Rasmus Lerdorf ในปี 1994 โดยที่ PHP ในปัจจุบันได้ถูกพัฒนาโดย The PHP Group ซึ่งคำว่า PHP นั้นย่อมาจาก Personal Home Page ซึ่งในปัจจุนั้นหมายถึง PHP: Hypertext Preprocessor</p>
+                <p>โค้ดของ PHP นั้นสามารถฝังกับโค้ดของ HTML ได้ ซึ่งมันสามารถนำไปร่วมใช้ร่วมกับระบบเว็บเท็มเพลตที่หลากหลาย ระบบจัดการเนื้อหา (CMS) หรือเว็บเฟรมเวิร์ค การทำงานของ PHP นั้นเป็นแบบ Interpreter ที่ถูกพัฒนาเป็นแบบโมดูลในเว็บเซิร์ฟเวอร์ หรือ Common Gateway Interface (CGI) โดยเซิร์ฟเวอร์จะทำการรวมโค้ดที่ผ่านการแปลผล และประมวลผลเป็นหน้าเว็บเพจ และยังสามารถทำงานได้บน Command-line interface (CLI) และนอกจากนี้ PHP ยังถูกนำไปพัฒนาแอพพลิเคชันทางด้านกราฟฟิก</p>
+                <p>Interpreter มาตรฐานของภาษา PHP นั้นได้รับการสนับสนุน Send Engine ซึ่งเป็นซอร์ฟแวร์ฟรีที่ให้ใช้ภายใต้ PHP License ภาษา PHP ได้ถูกนำไปใช้อย่างกว้างขวางกับเว็บเซิร์ฟเวอร์ในทุกๆ ระบบปฏิบัติการและแพลตฟอร์ม และมันฟรี</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- Content 2-->
+
+  <div class="section2">
+    <div class="container">
+        <div class="row">
+            <div class="head-text mb-5">
+                <h1>ประวัติของภาษา PHP</h1>
+            </div>
+
+            <div class="col-md-4 content-left-img">
+                <img src="https://live.staticflickr.com/4123/4926322352_c654bec015_z.jpg" alt="">
+            </div>
+
+            <div class="col-md-8 content-right-text">
+                <h1>Rasmus Lerdorf - ผู้คิดค้น PHP</h1>
+                <p>การพัฒนาภาษา PHP นั้นเริ่มต้นขึ้นเมื่อปี 1995 เมื่อ Rasmus Lerdorf ได้เขียน Common Gateway Interface (CGI) ที่หลากหลายเพื่อใช้ช่วยจัดการหน้าเว็บเพจของเขา เขาทำให้มันทำงานได้กับเว็บฟอร์มและติดต่อกับฐานข้อมูลได้ โดยเรียกมันว่า "Personal Home Page/Forms Interpreter" หรือ PHP/FI Interpreter มาตรฐานของภาษา PHP นั้นได้รับการสนับสนุน Send Engine ซึ่งเป็นซอร์ฟแวร์ฟรีที่ให้ใช้ภายใต้ PHP License ภาษา PHP ได้ถูกนำไปใช้อย่างกว้างขวางกับเว็บเซิร์ฟเวอร์ในทุกๆ ระบบปฏิบัติการและแพลตฟอร์ม และมันฟรี</p>
+                <p>PHP/FI นั้นสามารถช่วยสร้างหน้าเว็บเพจอย่างง่าย และไดนามิกส์เว็บแอพพลิเคชันได้ เพื่อช่วยเรื่องการตรวจสอบความผิดพลาดและพัฒนาโค้ดให้ดีขึ้น Lerdorf ได้เผยแพร่ PHP/FI ในชื่อ "Personal Home Page Tools (PHP Tools) version 1.0" โดยการเผยแพร่นั้นมีฟังก์ชันพื้นฐานที่ PHP มีจนถึงปี 2013 ซึ่งประกอบไปด้วย Perl-like variables การควบคุมฟอร์ม และการฝังไว้ในโค้ดของ HTML รูปแบบของ PHP นั้นคล้ายกับภาษา Perl แต่มีข้อจำกัดน้อยกว่าและมั่นคงกว่า</p>
+                <p>Rasmus Lerdorf นั้นไม่ได้ตั้งใจให้ PHP มาเป็นภาษาเขียนโปรแกรมใหม่ แต่มันเติบโตและเผยแพร่อย่างรวดเร็ว เขาได้กล่าวว่า "ฉันไม่รู้จะหยุดมันยังไง มันสิ่งที่เกิดขึ้นโดยไม่ได้ตั้งใจที่จะเขียนภาษาใหม่ ฉันไม่รู้วิธีเขียนภาษาหนุ่งขึ้นมาใหม่จริงๆ ในตอนนี้ฉันเพียงแค่ทำมันต่อไปให้ดีที่สุด" กลุ่มนักพัฒนาเริ่มต้นในการพัฒนาฟอร์ม หลังจากทดสอบจากนั้น 1 เดือน เวอร์ชันเบต้า PHP/FI 2 ได้เผยแพร่ใน November 1997 ซึ่งในปัจจุบันภาษา PHP นั้นเป็นเวอร์ชัน 7.0 ซึ่งถูกเผยแพร่ใน December 2, 2016</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section3">
+  <div class="container">
+      <div class="row">
+          <div class="head-text mb-5">
+              <h1>What Can PHP Do?</h1>
+              <p style="font-size: 32px;">PHP ทำอะไรได้บ้าง?</p>
+          </div>
+
+          <div class="card m-3" style="width: 18rem;">
+            <img src="img/php1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">สามารถสร้างเนื้อหาแบบ Dynamic ได้</h5>
+            </div>
+          </div>
+
+          <div class="card m-3" style="width: 18rem;">
+            <img src="img/php2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">สามารถสร้าง เปิด อ่าน เขียน ลบไฟล์ในระบบได้</h5>
+            </div>
+          </div>
+
+          <div class="card m-3" style="width: 18rem;">
+            <img src="img/php3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">สามารถเพิ่ม ลบ แก้ไขข้อมูลในฐานข้อมูลได้</h5>
+            </div>
+          </div>
+
+          <div class="card m-3" style="width: 18rem;">
+            <img src="img/php4.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">สามารถส่งและรับ Cookies ได้</h5>
+            </div>
+          </div>
+
+      </div>
+  </div>
+</div>
+
+
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="head-text mb-5">
+                <h1>การพัฒนาโปรแกรมด้วยภาษา PHP</h1>
+            </div>
+            <div class="col-md-12 content-right-text">
+                <p>ในการเขียนโปรแกรมด้วยภาษา PHP นั้น คุณจำเป็นต้องดาวน์โหลด PHP มาติดตั้งลงเครื่องที่เว็บไซต์ทางการของมัน http://php.net/downloads.php ซึ่งมันรองรับได้ทุกแพลตฟอร์ม ไม่ว่าจะเป็น Windows Linux หรือ MacOS และสำหรับ Text editor นั้นคุณสามารถใช้อะไรก็ได้ ที่ใช้สำหรับแก้ไข plain text เช่น Notepad หรือ Adobe Dreamweaver เป็นต้น ไฟล์ของภาษา PHP นั้นมีนามสกุลเป็น .php</p>
+                <p>เนื่องจากว่า PHP ไม่ได้เป็นส่วนหนึ่งของตัว Web Server ดังนั้นถ้าจะใช้ PHP ก็จะต้องดูก่อนว่า Web server นั้นสามารถใช้สคริปต์ PHP ได้หรือไม่ ยกตัวอย่างเช่น PHP สามารถใช้ได้กับ Apache WebServer และ Personal Web Server (PWP) สำหรับระบบปฏิบัติการ Windows 95/98/NT</p>
+                <p>ในกรณีของ Apache เราสามารถใช้ PHP ได้สองรูปแบบคือ ในลักษณะของ CGI และ Apache Module ความแตกต่างอยู่ตรงที่ว่า ถ้าใช้ PHP เป็นแบบโมดูล PHP จะเป็นส่วนหนึ่งของ Apache หรือเป็นส่วนขยายในการทำงานนั่นเอง ซึ่งจะทำงานได้เร็วกว่าแบบที่เป็น CGI เพราะว่า ถ้าเป็น CGI แล้ว ตัวแปลชุดคำสั่งของ PHP ถือว่าเป็นแค่โปรแกรมภายนอก ซึ่ง Apache จะต้องเรียกขึ้นมาทำงานทุกครั้ง ที่ต้องการใช้ PHP ดังนั้น ถ้ามองในเรื่องของประสิทธิภาพในการทำงาน การใช้ PHP แบบที่เป็นโมดูลหนึ่ง ของ Apache จะทำงานได้มีประสิทธิภาพมากกว่า</p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+
+
+
+  <!-- footer -->
+
+<div class="container-fuild">
+    <footer class="footer">
+      <p>© Copyrights. All rights reserved.</p>
+    </footer>
+</div>
+  
+
+  
+
+
+    
+
+
+    
+</body>
+</html>

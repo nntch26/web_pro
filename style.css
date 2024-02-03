@@ -1,0 +1,276 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+}
+
+
+/* navbar */
+.navbar-cus{
+    background-color: #671aff;
+    font-size: 20px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+
+
+}
+
+.navbar-brand, .nav-link{
+    color: rgb(255, 255, 255);
+}
+
+
+.navbar-brand{
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.nav-item, .dropdown-item{
+    font-weight: 300;
+
+}
+
+
+.navbar-nav{
+    padding: 5px;
+}
+
+.header{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+    background-color: #212529;
+    background-image: linear-gradient(#212529, rgba(29, 10, 92, 0.825)),
+    url("https://history-computer.com/wp-content/uploads/2023/06/shutterstock-701809438-huge-licensed-scaled.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.content-header{
+    padding: 100px;
+
+
+}
+
+
+
+
+/* header */
+
+.content-header h1{
+    font-size: 8rem;
+    font-weight: 500;
+    
+}
+
+.btn{
+    background-color: #671aff;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    width: 200px;
+    height: 60px;
+
+}
+
+.btn:hover{
+    border: 3px solid #671aff;
+    color: #671aff;
+}
+
+.content-header h1:hover{
+    color:  #671aff;
+}
+
+
+/* Home */
+
+.content-home{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.content-home h1{
+    color: #671aff;
+}
+
+
+
+
+/* section_intro */
+.section{
+    margin-top: 8rem;
+    margin-bottom: 10rem;
+}
+
+img{
+    width: 100%;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    
+}
+
+
+.content-left-img{
+    padding: 10px;
+
+}
+
+
+.content-right-text{
+    font-weight: 300;
+}
+
+.content-right-text h1{
+    color: #671aff;
+}
+
+.head-text h1{
+    text-align: center;
+    font-size: 64px;
+}
+.head-text{
+    text-align: center;
+    font-size: 32px;
+    
+}
+
+.section2{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background-color: #212529;
+    color: rgb(255, 255, 255);
+}
+
+.section2 p{
+    font-size: 18px;
+}
+
+.section3{
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+    background-image: linear-gradient(#212529, rgba(29, 10, 92, 0.811)),
+    url("https://history-computer.com/wp-content/uploads/2023/06/shutterstock-701809438-huge-licensed-scaled.jpg");
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+
+}
+
+.section3 h1{
+    color: #671aff;
+}
+
+
+
+.card{
+    padding: 30px;
+    box-shadow: 5px 8px 15px 3px rgba(110, 42, 255, 0.3);
+
+
+}
+
+.card-body{
+    text-align: center;
+}
+
+
+/* Installation */
+
+
+.content-text h1{
+    color: #671aff;
+}
+
+.content-text p{
+    font-size: 24px;
+}
+
+
+/*  Basic PHP Syntax */
+
+.section5{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+
+}
+
+.content1{
+    /*box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);*/
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.content1 h1{
+    color: #671aff;
+    margin-bottom: 20px;
+    
+}
+
+.content1 p{
+    font-size: 20px;
+    margin-bottom: 20px;
+
+}
+
+.content1 li{
+    font-size: 20px;
+}
+
+.con-code{
+    width: 100%;
+    text-align: center;
+}
+
+table{
+    text-align: center;
+    font-size: 18px;
+}
+
+th{
+    font-weight: 500;
+    font-size: 24px;
+}
+
+
+/* Advanced */
+
+.con-img , .txt{
+    display: flex;
+    justify-content: center;
+
+}
+
+.txt p{
+    font-size: 14px;
+}
+
+
+.con-img img{
+    width: 50%;
+}
+
+.con-txt2{
+    background-color: #212529c9;
+    border-radius: 10px;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+/* footer */
+.footer{
+    padding: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color:#212529;
+}

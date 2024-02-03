@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Learn PHP - Project</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+
+  <nav class="navbar navbar-cus navbar-expand-lg fixed-top">
+      <div class="container">
+
+        <a class="navbar-brand" href="index.html">PHP</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="intro.html">Introduction</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="install.html">Install</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="basic.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PHP Basic
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#syntax">Syntax</a></li>
+                <li><a class="dropdown-item" href="#display">Echo/Print</a></li>
+                <li><a class="dropdown-item" href="#Variables">Variables</a></li>
+                <li><a class="dropdown-item" href="#Data">Data Type</a></li>
+                <li><a class="dropdown-item" href="#Operator">Operator</a></li>
+                <li><a class="dropdown-item" href="#Conditional">if...else Statement</a></li>
+                <li><a class="dropdown-item" href="#Loop">Loops</a></li>
+                <li><a class="dropdown-item" href="#Functions">Functions</a></li>
+                <li><a class="dropdown-item" href="#Array">Arrays</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="advanced.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PHP Advanced
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="advanced.html">Sessions</a></li>
+                <li><a class="dropdown-item" href="advanced.html">GET/POST</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="reference.html">Reference</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+  </nav>
+
+   
+
+    <!-- Header -->
+
+  <div class="container-fuild">
+      <div class="header" id="home">
+          <div class="content-header">
+
+              <h1>Basic PHP Syntax</h1>
+              <h3>ในบทนี้ คุณจะได้เรียนรู้โครงสร้างที่จำเป็นที่คุณต้องต้องทราบในการเขียนโปรแกรมด้วยภาษา PHP <br>รูปแบบและกฏเกณฑ์ต่างๆ ในการเขียนโปรแกรมด้วยภาษา PHP</h3>
+              <p>มาเริ่มต้นกับโปรแกรมที่พื้นฐานที่สุดสำหรับการเรียนเขียนโปรแกรม</p>
+              <a href="#syntax"><button type="button" class="btn mt-5">Get Started</button></a>
+          </div>
+      </div>
+  </div>
+
+
+
+  <!-- Content -->
+
+  <div class="section5" id="syntax">
+    <div class="container">
+      <div class="row">
+        <h1 class="mb-5 mt-5">รูปแบบการเขียน PHP</h1>
+        <div class="col-md-12 content1">
+          <h1>PHP Syntax </h1>
+          <p>การเขียนสคริปต์ PHP ในรูปแบบใดก็ตามจะต้องมีเครื่องหมาย <b>semicolon ( ; ) </b>ลงท้ายคำสั่ง และคำสั่งหรือฟังก์ชั่นในภาษา PHP จะเขียนด้วยตัวพิมพ์เล็กหรือพิมพ์ใหญ่ก็ได้ ( case-insensitive ) ในการเขียนโปรแกรมภาษา PHP โค้ดของโปรแกรมจะต้องอยู่ภายในบล็อคคำสั่ง <b> &lt;?php </b> และ <b>?&gt;</b></p>
+            
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=435.75&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%252F%252F%2520PHP%2520code%2520goes%2520here%250A%253F%253E"
+            style="width: 436px; height: 227px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+        
+          </div>
+
+          <h1>Comment</h1>
+          <p><b>Comment</b> คือส่วนของซอสโค้ดที่ไม่มีผลต่อการทำงานของโปรแกรม มันใช้สำหรับการอธิบายโปรแกรมเพื่อให้ผู้เขียนเข้าใจหรือสามารถอ่านโค้ดในภายหลังได้ง่ายขึ้น การคอมเม้นต์โค้ดมีประโยชน์มากในการทำงานเป็นทีมเพื่อให้คนอื่นสามารถเข้าใจโค้ดของเรา</p>
+          <p>ในภาษา PHP คุณสามารถเขียนคอมเม้นต์ได้หลายรูปแบบ</p>
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=511&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%252F%252F%2520This%2520is%2520a%2520single-line%2520comment%250A%250A%252F%252F%2520%2523%2520This%2520is%2520also%2520a%2520single-line%2520comment%250A%250A%252F*%2520This%2520is%2520a%250Amulti-line%2520comment%2520*"
+            style="width: 511px; height: 301px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+        
+          </div>
+
+          <p>การคอมเม้นต์บรรทัดเดียว ข้อความที่ต้องการคอมเม้นต์จะอยู่หลัง <b>//</b> <br> และการคอมเนต์แบบบล็อคหรือหลายบรรทัด ข้อความจะอยู่ระหว่าง <b>/* และ */</b> <br> คุณยังสามารถใช้ <b>#</b> สำหรับความคิดเห็นบรรทัดเดียวได้</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section5" id="display">
+    <div class="container">
+      <div class="row">
+        <h1 class="mb-5">การแสดงผลทางหน้าจอ</h1>
+        <div class="col-md-12 content1">
+          <h1>PHP echo and print Statements</h1>
+          <p>การแสดงผลในภาษา PHP นั้นมักจะใช้คำสั่ง <b>echo และ print </b>สำหรับจัดการและเชื่อมต่อกับ Output stream ซึ่งโดยปกติแล้วมักจะเป็นจอภาพหรือ Console มาดูตัวอย่างการแสดงผลในเบื้องต้น</p>
+            
+          <h1>Echo Statement</h1>
+          <p><b>คำสั่ง echo </b>สามารถใช้โดยมีหรือไม่มีวงเล็บก็ได้ เช่น <b>echo หรือ echo()</b></p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=echo%2520%2522%253Ch2%253EPHP%2520is%2520Fun%21%253C%252Fh2%253E%2522%253B%250Aecho%2520%2522Hello%2520world%21%253Cbr%253E%2522%253B%250Aecho%2520%2522I%27m%2520about%2520to%2520learn%2520PHP%21%253Cbr%253E%2522%253B%250Aecho%2520%2522This%2520%2522%252C%2520%2522string%2520%2522%252C%2520%2522was%2520%2522%252C%2520%2522made%2520%2522%252C%2520%2522with%2520multiple%2520parameters.%2522%253B%250A%250A"
+            style="width: 762px; height: 283px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <h1>Print Statement</h1>
+          <p><b>คำสั่ง print</b> สามารถใช้โดยมีหรือไม่มีวงเล็บก็ได้ <b>print หรือ print()</b></p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=print%2520%2522%253Ch2%253EPHP%2520is%2520Fun%21%253C%252Fh2%253E%2522%253B%250Aprint%2520%2522Hello%2520world%21%253Cbr%253E%2522%253B%250Aprint%2520%2522I%27m%2520about%2520to%2520learn%2520PHP%21%2522%253B%250A%250A"
+            style="width: 762px; height: 264px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section5" id="Variables">
+    <div class="container">
+      <div class="row">
+        <h1 class="mb-5">ตัวแปรและประเภทข้อมูล</h1>
+        <div class="col-md-12 content1">
+          <h1>ตัวแปร - Variables</h1>
+          <p><b>ตัวแปร </b>คือสิ่งที่ใช้เก็บค่าของข้อมูลในหน่วยความจำ ตัวแปรจะประกอบไปด้วยชื่อของตัวแปร (identifier) ใช้เพื่ออ้างอิงหรือเข้าถึงค่าภายในตัวแปร ตัวแปรเก็บข้อมูลในหน่วยความจำ ดังนั้นเราสามารถเข้าถึงค่าของตัวแปรและอัพเดทค่าได้ตลอดเวลา</p>
+            
+          <h1>การประกาศตัวแปร</h1>
+          <p>ในการประกาศตัวแปรในภาษา PHP คุณไม่ต้องกำหนดประเภทของตัวแปรเหมือนในภาษา C หรือภาษาอื่นๆ ที่เป็นภาษาประเภท typed language ซึ่งตัวแปรจะ<b>ขึ้นต้นด้วยเครื่องหมายดอลลา $ และตามด้วยชื่อของตัวแปร</b></p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2524x%2520%253D%25205%253B%250A%2524y%2520%253D%2520%2522John%2522%250A%250A"
+            style="width: 762px; height: 245px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>การตั้งชื่อตัวแปรในภาษา PHP นั้นจะต้องประกอบไปด้วยตัวอักษร ตัวแปรเลขและเครื่องหมาย _ เท่านั้น และไม่สามารถขึ้นต้นด้วยตัวเลขได้ กฏนี้ยังใช้กับการกำหนดชื่ออื่นๆ ที่ผู้ใช้สร้างขึ้น ยกตัวอย่างเช่น ชื่อของฟังก์ชัน เมธอด หรือ คลาส</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2524n%2520%253D%25201%253B%250A%2524n%2520%253D%25203.25%253B%250A%2524n%2520%253D%2520%2522PHP%2522%253B%250A%250A"
+            style="width: 762px; height: 264px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+            
+          </div>
+         <p><b>ในการประกาศตัวแปรในภาษา PHP คุณไม่จำเป็นต้องกำหนดประเภทให้กับตัวแปร</b> ซึ่ง PHP จะจัดการเรื่องนี้ให้โดยอัตโนมัติ ในตัวอย่างเราประกาศตัวแปร $n และกำหนดค่า 1 ทำให้ตัวแปรนี้เป็นประเภทจำนวนเต็ม ต่อมาเรากำหนดค่า 3.25 ให้กับตัวแปร ประเภทของตัวแปรจะเปลี่ยนเป็นจำนวนจริง และเปลี่ยนเป็น String ตามลำดับ</p>
+
+
+
+          <h1>ฟังก์ชันเกี่ยวกับตัวแปร</h1>
+          <p>ในการทำงานกับตัวแปรในบางครั้ง เราใช้ฟังก์ชันเพื่อตรวจสอบบางอย่างเกี่ยวกับตัวแปร ต่อไปเราจะพูดเกี่ยวกับฟังก์ชันของตัวแปรในภาษา PHP</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250A%2524site%2520%253D%2520%2522MarcusCode%2522%253B%250A%2524year%2520%253D%25202016%253B%250A%2524pi%2520%253D%25203.14%253B%250A%250Aecho%2520var_dump%28%2524site%29%253B%250Aecho%2520var_dump%28%2524year%29%253B%250Aecho%2520var_dump%28%2524pi%29%253B%250A%250Aecho%2520isset%28%2524site%29%252C%2520%2522%255Cn%2522%253B%250Aunset%28%2524site%29%253B%250Aecho%2520isset%28%2524site%29%252C%2520%2522%255Cn%2522%253B%250A%250A%253F%253E%250A%250A"
+            style="width: 762px; height: 487px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>PHP มีฟังก์ชันที่ให้เราสามารถใช้งานกับตัวแปรมากมาย</p>
+          <ul>
+            <li><b>ฟังก์ชัน var_dump() </b> ใช้ในการตรวจสอบประเภทของตัวแปร</li>
+            <li><b>ฟังก์ชัน isset() </b> ใช้ในการตรวจสอบว่าตัวแปรถูกประกาศแล้วหรือไม่</li>
+            <li><b>ฟังก์ชัน unset() </b>ใช้สำหรับยกเลิกการประกาศตัวแปรดังกล่าวและคืนค่าหน่วยความจำให้ระบบ</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section5" id="Data">
+    <div class="container">
+      <div class="row">
+        <h1 class="mb-5">ประเภทของข้อมูล</h1>
+        <div class="col-md-12 content1">
+          <h1>PHP Data Types</h1>
+          <p><b>ประเภทข้อมูล</b> คือการจำแนกประเภทของข้อมูลแบบต่างๆ การนำมาใช้งานกับตัวแปรในการเขียนโปรแกรม เช่น อายุ เป็นข้อมูลแบบตัวเลข และชื่อเป็นข้อมูลแบบตัวอักษรหรือ String ซึ่งประเภทของข้อมูลแต่ละแบบจะแตกต่างกันและใช้หน่วยความจำในการเก็บข้อมูลที่ต่างกัน</p>
+          <p>ในการเขียนโปรแกรมนั้นจะมีข้อมูลหลากหลายแบบ เพื่อที่จะจัดการข้อมูลปรเภทต่างๆ คุณจำเป็นต้องเข้าใจประเภทของข้อมูลก่อน ซึ่งในภาษา PHP จะมีข้อมูลแบ่งออกเป็น 8 ประเภท ได้แก่ Boolean Integer Float String Array Resource และ Null ต่อไปเราจะอธิบายแต่ละประเภท</p>
+
+
+          <h1>Boolean</h1>
+          <p><b>Boolean </b> คือประเภทข้อมูลที่มีค่าที่เป็นไปได้เพียงสองค่าคือ true หรือ false ซึ่งข้อมูลประเภทนี้ใช้หน่วยความจำในการเก็บข้อมูลน้อยที่สุด (1 bit) เราใช้ตัวแปร Boolean ในการเก็บค่าที่เป็นไปได้เพียงสองอย่าง เช่น กลางวันหรือกลางคืน เพศชายหรือเพศหญิง จำนวนคู่หรือจำนวนคี่ เป็นต้น</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2524male%2520%253D%2520true%253B%250A%2524is_rain%2520%253D%2520false%253B%250A%2524is_even_number%2520%253D%2520%285%2520%2525%25202%2520%253D%253D%25200%29%253B%250A%2524is_odd_number%2520%253D%2520%21%2524is_even_number%253B%250A"
+            style="width: 762px; height: 264px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>ตัวแปร $is_even_number เป็นการเก็บค่าว่าตัวเลขเป็นเลขจำนวนคู่หรือไม่ โดยเราคำนวณจาก Expression โดยการตรวจสอบว่า 5 หารด้วยสองลงตัวหรือไม่ เพราะ 5 หารด้วยสองไม่ลงตัว ทำให้ได้ค่าเป็น false และตัวแปร $is_odd_number เราเก็บค่าตรงข้ามของตัวแปร $is_even_number ซึ่งตัวแปรนี้จะมีค่าเป็น true</p>
+
+          <h1>Integer</h1>
+          <p><b>Integer</b> คือประเภทข้อมูลแบบจำนวนเต็ม (จำนวนที่ไม่มีทศนิยม) สามารถเป็นได้จำนวนเต็มบวกและจำนวนเต็มลบ มันใช้สำหรับเก็บข้อมูลที่สามารถนับได้ เช่น จำนวนของแอปเปิ้ลในตระกร้า คะแนนสอบวิชาคณิตศาสตร์ เป็นต้น</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250A%2524apple%2520%253D%25203%253B%250A%2524score%2520%253D%2520-10%253B%250Aecho%2520%2522I%2520have%2520%2524apple%2520apples%2520in%2520the%2520basket.%255Cn%2522%253B%250Aecho%2520%2522Your%2520score%2520is%2520%2524score%2520.%255Cn%2522%253B%250A%250A%2524minute%2520%253D%25205%253B%250A%2524second%2520%253D%252030%253B%250A%2524total_second%2520%253D%2520%28%2524minute%2520*%252060%29%2520%252B%2520%2524second%253B%250Aecho%2520%2522There%2520are%2520%2524total_second%2520seconds%2520left.%255Cn%2522%253B%250A%250A%253F%253E%250A%2520%2520%250A%252F*%250AOutput%250A%250AI%2520have%25203%2520apples%2520in%2520the%2520basket.%250AYour%2520score%2520is%2520-10.%250AThere%2520are%2520330%2520seconds%2520left.%250A%250A*%252F%250A"
+            style="width: 762px; height: 599px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <h1>Float</h1>
+          <p><b>Floating number</b> คือประเภทข้อมูลที่เก็บข้อมูลในรูปแบบของจำนวนจริง ซึ่งมักจะใช้ในการเก็บตัวเลขทีมีค่าและความละเอียดมาก เช่น ข้อมูลการคำนวณทางวิทยาศาตร์หรือตัวเลขที่มีจุดทศนิยมน</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250A%2524temperature%2520%253D%2520-10.3%253B%250A%2524height%2520%253D%25206.1%253B%250A%2524pi%2520%253D%252022%2520%252F%25207%253B%250A%2524distance%2520%253D%2520149.6E6%253B%250A%2524atom_size%2520%253D%25200.5E-10%253B%250A%250A%253F%253E%250A"
+            style="width: 762px; height: 357px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+
+          <h1>String</h1>
+          <p><b>String</b> คือประเภทข้อมูลประเภทข้อความหรือการนำตัวอักษรหลายๆ ตัวมาต่อกัน โดยความยาวของ String นั้นสามารถเปลี่ยนแปลงได้ซึ่งเป็นตัวแปรแบบไดนามิกส์ ในภาษา PHP นั้น สามารถเก็บตัวอักษรได้ทุกแบบ เช่น UTF-8 เนื่องจาก String มีเนื้อหาค่อนข้างมากเราจะพูดในภายหลังในบทของ String</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250A%2524country%2520%253D%2520%2522United%2520Kingdom%2522%253B%250A%2524fruit%2520%253D%2520%2522Apple%2522%253B%250A%2524name%2520%253D%2520%2522Marcus%2522%253B%250A%2524date%2520%253D%2520%2522November%25208%252C%25202016%2522%253B%250A%250A%253F%253E%250A"
+            style="width: 762px; height: 339px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <h1>Null</h1>
+          <p><b>NULL</b> เป็นข้อมูลชนิดพิเศษในการบ่งบอกถึงว่าตัวแปรไม่ได้ถูกกำหนดหรือสร้างขึ้น ซึ่ง NULL เป็นประเภทข้อมูลของมันเอง ตัวแปรจะมีค่าเป็น NULL ถ้าหากมันถูกกำหนดโดย NULL หรือยังไม่ได้กำหนดค่า หรือการใช้ฟังก์ชัน unset() เพื่อยกเลิกตัวแปร</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250A%2524var%2520%253D%2520NULL%253B%250A%2524name%253B%250A%2524a%2520%253D%2520array%28%29%253B%2520%250A%250A%253F%253E"
+            style="width: 762px; height: 301px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>ในตัวอย่างเป็นการประกาศตัวแปรที่มีค่าเป็น NULL ซึ่งมันแบบ case-insensitive สามารถใช้ null ได้เช่นกัน <b>คุณสามารถใช้ฟังก์ชัน is_null() เพื่อตรวจสอบตัวแปรได้</b></p>
+
+          <h1>การแปลงข้อมูลในภาษา PHP</h1>
+          <p>ในการประกาศตัวแปรและกำหนดค่าให้กับตัวแปรนั้น ภาษา PHP จะตรวจสอบค่าที่เราได้กำหนดให้กับตัวแปรว่าเป็นข้อมูลประเภทไหน ซึ่งเรีบกว่า <b>Implicit type conversion</b> ในภาษา PHP คุณสามารถแปลงค่าข้อมูลอีกประเภทหนึ่งไปเป็นอีกประเภทหนึ่งได้เอง เราเรียกว่า Explicit type conversion หรือ Type casting มาดูตัวอย่าง</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2524floatValue%2520%253D%25201.53%253B%250A%2524intValue%2520%253D%2520%28int%29%2524floatValue%253B%250Aecho%2520var_dump%28%2524floatValue%29%253B%250Aecho%2520var_dump%28%2524intValue%29%253B%250A%250A%252F*%250AOutput%250A%250Afloat%281.53%29%250Aint%281%29%250A*%252F"
+            style="width: 762px; height: 376px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>ในตัวอย่างเป็นการแปลงข้อมูลจาก Integer ไป Float โดยการ Type casting เราใช้เครื่องหมายวงเล็บ () ภายในเป็นประเภทข้อมูลที่ต้องการแปลงไปยัง เช่น int float string bool เป็นต้น</p>
+
+          <h1>ค่าคงที่ - Constants</h1>
+          <p><b>ค่าคงที่ (Constants)</b> คือค่าของ Literal ใดๆ ที่ถูกกำหนดให้กับตัวแปรค่าคงที่ ค่าคงที่จะไม่สามารถเปลี่ยนแปลงได้ภายในโปรแกรมและเป็นได้เพียงค่าเดียวตั้งแต่โปรแกรมเริ่มจนสิ้นสุดการทำงาน ในภาษา PHP คุณสามารถประกาศค่าคงที่ได้สองแบบโดยการใช้ฟังก์ชัน define() และคำสั่ง Const</p>
+
+          <h1>การประกาศค่าคงที่ด้วยฟังก์ชัน define()</h1>
+          <p>ในการประกาศค่าคงที่ในภาษา PHP เราจะใช้ฟังก์ชัน <b>define()</b> ซึ่งเป็นฟังก์ชันสำหรับการประกาศค่าคงที่ในพื้นฐาน มาดูตัวอย่างการใช้งาน</p>
+
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250Adefine%28%27NAME%27%252C%2520%27MARCUSCODE%27%29%253B%250Adefine%28%27YEAR%27%252C%25202016%29%253B%250Adefine%28%27blue%27%252C%2520%27%25230000ff%27%252C%2520true%29%253B%250A%250Aecho%2520%2522Welcome%2520to%2520%2522%2520.%2520NAME%2520.%2520%2522.%255Cn%2522%253B%250Aecho%2520%2522Next%2520year%2520is%2520%2522%2520.%2520%28YEAR%2520%252B%25201%29%2520.%2520%2522.%255Cn%2522%253B%250A%250Aif%2520%28BLUE%2520%21%253D%253D%2520null%29%2520%257B%250A%2520%2520%2520%2520echo%2520%27BLUE%2520constant%2520is%2520defined.%27%253B%250A%257D%250A%250A%253F%253E%250A%2520%2520%250A%252F*%250AOutput%250A%250AWelcome%2520to%2520MARCUSCODE.%250ANext%2520year%2520is%25202017.%250ABLUE%2520constant%2520is%2520defined.%250A%250A%250A*%252F"
+            style="width: 762px; height: 618px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>ในตัวอย่างเราประกาศค่าคงที่ NAME YEAR และ blue และกำหนดค่าให้กับค่าคงที่เหล่านี้ เราสามารถใช้งานค่าคงที่ได้เหมือนกับตัวแปร ในการใช้กับตัวดำเนินการ หรือคำสั่งตรวจสอบเงื่อนไขต่างๆ</p>
+          <p>ค่าคงที่ NAME เป็นค่าคงที่แบบ String YEAR เป็นค่าคงที่แบบจำนวนเต็ม (Integer) และสุดท้าย blue เป็นค่าคงที่แบบ String เช่นเดียวกันกับค่าคงที่แรก แต่เราได้กำหนดให้พารามิเตอร์ตัวที่สามเป็น true นั่นหมายความว่าเราสามารถใช้ค่าคงที่แบบ case-insensitive ได้ เช่น BLUE Blue หรือ BlUe เป็นต้น และเราได้แสดงผลค่าคงที่แต่ละตัวออกมา และตรวจสอบเงือนไขด้วยคำสั่ง If ซึ่งใน Expression BLUE !== null จะเป็นจริงถ้าหากค่าคงนี้ถูกกำหนด</p>
+
+          
+          <h1>การประกาศค่าคงที่ด้วยคำสั่ง Const</h1>
+          <p>นอกจากนี้ในภาษา PHP คุณยังสามารถใช้คำสั่ง <b>Const</b> ในการประกาศค่าคงที่ได้ ซึ่งมันมีข้อแตกต่างจากการใช้ฟังก์ชัน define() ดังนี้</p>
+
+          <ul>
+            <li> Const จะทำการกำหนดค่าคงที่ในเวลา Run-time ในขณะที่ define() กำหนดค่าคงที่ใน Compile </li>
+            <li> Const ไม่สามารถใช้ในบล็อคของคำสั่ง เช่น If For หรือ While เป็นต้น </li>
+            <li> Const สามารถกำหนดค่า Literal เท่านั้น ในขณะที่ define() สามารถเป็น Expression ใดๆ</li>
+            <li> Const จะเป็นแบบ case-sensitive ในขณะที่ define() สามารถกำหนดเป็น case-insensitive ได้ </li>
+            <li> Const สามารถกำหนดค่าแบบอาเรย์ได้ ในขณะที่ define() ไม่สามารถทำได้ </li>
+            <li> Const สามารถใช้ประกาศเป็นค่าคงที่ภายในคลาสหรือ Interface ได้ </li>
+
+
+          </ul>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250Aconst%2520MYCAR%2520%253D%2520%2522Volvo%2522%253B%250A%250Aecho%2520MYCAR%253B%250A%253F%253E%2520%250A%2520%2520%250A%252F*%250AOutput%250A%250AVolvo%250A%250A*%252F"
+            style="width: 762px; height: 394px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section5" id="Operator">
+    <div class="container">
+      <div class="row">
+        <h1 class="mb-5">ตัวดำเนินการ</h1>
+        <div class="col-md-12 content1">
+          <h1>PHP Operators</h1>
+          <p><b>ตัวดำเนินการ</b> คือเครื่องหมายหรือสัญลักษณ์ที่กำหนดขึ้นสำหรับใช้ในการจัดการกับตัวแปรและค่าคงที่ หรือสร้าง Expression ขึ้นและนำไปใช้งานในการเขียนโปรแกรม ตัวดำเนินการในภาษา PHP มีหลายรูปแบบซึ่งในบทนี้ เนื้อหาได้แบ่งย่อยออกเป็นดังนี้</p>
+          
+          <ul class="mb-5">
+            <li> Arithmetic operators</li>
+            <li> Assignment operators</li>
+            <li> Comparison operators</li>
+            <li> Increment/Decrement operators </li>
+            <li> Logical operators</li>
+            <li> String operators</li>
+            <li> Array operators</li>
+            <li>Conditional assignment operators</li>
+          </ul>
+
+          <h1>PHP Arithmetic Operators</h1>
+          <p><b>ตัวดำเนินการทางคณิตศาสตร์ (Arithmetic operators) </b>เป็นตัวดำเนินการในการหาผลลัพธ์จากการกระทำทางคณิตศาสตร์ เช่น การบวก การลบ การคูณ และหารหาร โดยมีตัวเลขเป็น Operand และจะได้ผลลัพธ์สุดท้ายออกมาค่าเดียว</p>
+
+          <table class="table table-striped table-bordered mt-5 mb-5">
+            <tr>
+                <thead>
+                    <th>Operator</th>
+                    <th>Name</th>
+                    <th>Example</th>
+                    <th>Result</th>
+                </thead>
+            </tr>
+
+            <tbody>
+                <tr>
+                  <td>+</td>
+                  <td>Addition</td>
+                  <td>$x + $y</td>
+                  <td>Sum of $x and $y</td>
+                </tr>
+
+                <tr>
+                    <td>-</td>
+                    <td>Subtraction</td>
+                    <td>$x - $y</td>
+                    <td>Difference of $x and $y</td>
+                </tr>
+
+                <tr>
+                    <td>*</td>
+                    <td>Multiplication</td>
+                    <td>$x * $y</td>
+                    <td>Product of $x and $y</td>
+                </tr>
+
+                <tr>
+                    <td>/</td>
+                    <td>Division</td>
+                    <td>$x / $y</td>
+                    <td>Quotient of $x and $y</td>
+                </tr>
+
+                <tr>
+                    <td>%</td>
+                    <td>Modulus</td>
+                    <td>$x % $y</td>
+                    <td>Remainder of $x divided by $y</td>
+                </tr>
+
+                <tr>
+                    <td>**</td>
+                    <td>Exponentiation</td>
+                    <td>$x ** $y</td>
+                    <td>Remainder of $x divided by $y</td>
+                </tr>
+
+                
+              </tbody>
+          </table>
+
+          <h1>PHP Logical Operators</h1>
+          <p>ตัวดำเนินการเชิงตรรกะ PHP ใช้ในการรวมคำสั่งแบบมีเงื่อนไข</p>
+
+          <table class="table table-striped table-bordered mt-5 mb-5">
+            <tr>
+                <thead>
+                    <th>Operator</th>
+                    <th>Name</th>
+                    <th>Example</th>
+                    <th>Result</th>
+                </thead>
+            </tr>
+
+            <tbody>
+                <tr>
+                  <td>and</td>
+                  <td>And</td>
+                  <td>$x and $y</td>
+                  <td>True if both $x and $y are true</td>
+                </tr>
+
+                <tr>
+                    <td>or</td>
+                    <td>Or</td>
+                    <td>$x or $y</td>
+                    <td>True if either $x or $y is true</td>
+                </tr>
+
+                <tr>
+                    <td>xor</td>
+                    <td>Xor</td>
+                    <td>$x xor $y</td>
+                    <td>True if either $x or $y is true, but not both</td>
+                </tr>
+
+                <tr>
+                    <td>&&</td>
+                    <td>And</td>
+                    <td>$x && $y</td>
+                    <td>True if both $x and $y are true</td>
+                </tr>
+
+                <tr>
+                    <td>||</td>
+                    <td>Or</td>
+                    <td>$x || $y</td>
+                    <td>True if either $x or $y is true</td>
+                </tr>
+
+                <tr>
+                    <td>!</td>
+                    <td>Not</td>
+                    <td>!$x</td>
+                    <td>True if $x is not true</td>
+                </tr>
+
+                
+              </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+  <div class="section5" id="Conditional">
+    <div class="container">
+      <div class="row">
+        <h1 class="mb-5">คำสั่งเลือกเงื่อนไข</h1>
+        <div class="col-md-12 content1">
+          <h1>PHP Conditional Statements</h1>
+          <p>ในการเขียนโปรแกรม อาจจะมีเงือนไขหรือข้อกำหนดบางอย่างที่คุณต้องการให้โปรแกรมทำงานแตกต่างกันไป การตัดสินใจจึงเป็นเรื่องธรรมดาที่เกิดขึ้นทั้งในการเขียนโปรแกรมและในชีวิตประจำวัน</p>
+            
+          <h1>คำสั่ง If</h1>
+          <p><b>คำสั่ง If</b> เป็นคำสั่งควบคุมที่พื้นฐานที่สุดในการเขียนโปรแกรม มันใช้สำหรับควบคุมการทำงานในกรณีที่เงื่อนไขเป็นจริง นี่เป็นรูปแบบการใช้งานของคำสั่ง If ในภาษา PHP</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=if%2520%28expression%29%250A%2520%2520%2520%2520statements"
+            style="width: 762px; height: 208px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>การตรวจสอบเงือนไขของคำสั่ง If นั้น เกิดจากการประเมิน expression ถ้าหากเป็นจริงโปรแกรมจะทำงานในบล็อคของคำสั่ง If ถ้าหากไม่เป็นจริงโปรแกรมจะข้ามการทำงานไป มาดูตัวอย่างการใช้งาน</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250A%2524number%2520%253D%25205%253B%250A%250Aif%2520%28%2524number%2520%253D%253D%25205%29%2520%257B%250A%2520%2520%2520%2520echo%2520%2522Number%2520is%2520equal%25205.%2522%253B%250A%257D%250A%250A%253F%253E%250A%2520%2520%250A%2520%252F*%250A%2520%250A%2520Output%250A%2520Number%2520is%2520equal%25205.%250A%2520%250A%2520*%252F"
+            style="width: 762px; height: 469px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+            
+          </div>
+         <p>ในตัวอย่าง เรามีตัวแปร $number ในการเก็บค่าของตัวเลข เนื่องจาก Expression เป็นจริง นั่นคือในตัวแปรมีค่าเท่ากับ 5 โปรแกรมจึงทำงานในบล็อคของคำสั่ง If และแสดงข้อความ "Number is equal 5."</p>
+
+
+
+          <h1>คำสั่ง If Else</h1>
+          <p><b>คำสั่ง If Else </b> ใช้สำหรับตรวจสอบเงื่อนไขเช่นเดียวกับคำสั่ง If แต่ในการทำงานจะมีการเพิ่มบล็อคของคำสั่ง else เข้ามาถ้าหากเงือนไขในคำสั่ง If ไม่เป็นจริง มาดูตัวอย่างการใช้คำสั่ง If Else ในภาษา PHP</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250A%2524money%2520%253D%252080%253B%250A%250Aif%2520%28%2524money%2520%253E%253D%2520100%29%2520%257B%250A%2520%2520%2520%2520echo%2520%2522Buy%2520a%2520video%2520game.%2522%253B%250A%257D%2520else%2520%257B%250A%2520%2520%2520%2520echo%2520%2522Buy%2520a%2520book.%2522%253B%250A%257D%250A%250A%253F%253E%250A%2520%2520%250A%2520%252F*%250A%2520%250A%2520Output%250A%2520Buy%2520a%2520book.%250A%2520%250A%2520*%252F"
+            style="width: 762px; height: 506px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>ในตัวอย่างเป็นการใช้งานคำสั่ง If Else กับสถาณการณ์ที่เราได้พูดถึงก่อนหน้านี้ เรามีตัวแปร $money เก็บค่าของจำนวนเงิน ถ้ามีเงินมากกว่าหรือเท่ากับ 100 เหรียญเราจะซื้อวิดีโอเกม แต่ถ้าไม่ใช่จะซื้อหนังสือแทน และเนื่องจากเราได้กำหนดค่าในตัวแปรเพียง 80 โปรแกรมจึงทำงานในบล็อคของคำสั่ง Else แทน</p>
+          
+
+          <h1>คำสั่ง If Else-If</h1>
+          <p><b>คำสั่ง If-Else</b> เป็นคำสั่งในการสร้างเงือนไขแบบสองทางเลือกหรือจริงและไม่จริงเท่านั้น ในภาษา PHP คุณสามารถสร้างเงือนไขแบบหลายทางเลือกได้โดยการใช้คำสั่ง Else-If สำหรับเงือนไขเพิ่มเติมที่ต้องการ เราจะยกตัวอย่างในการใช้กับโปรแกรมคำนวณเกรด</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250A%2524score%2520%253D%252079%253B%250A%250Aif%2520%28%2524score%2520%253E%253D%252080%29%2520%257B%250A%2520%2520%2520%2520echo%2520%2522Your%2520grade%2520is%2520A.%2522%253B%2520%2520%2520%2520%250A%257D%2520else%2520if%2520%28%2524score%2520%253E%253D%252070%29%2520%257B%250A%2520%2520%2520%2520echo%2520%2522Your%2520grade%2520is%2520B.%2522%253B%2520%2520%2520%2520%250A%257D%2520else%2520if%2520%28%2524score%2520%253E%253D%252060%29%2520%257B%250A%2520%2520%2520%2520echo%2520%2522Your%2520grade%2520is%2520C.%2522%253B%2520%2520%2520%2520%250A%257D%2520else%2520if%2520%28%2524score%2520%253E%253D%252050%29%2520%257B%250A%2520%2520%2520%2520echo%2520%2522Your%2520grade%2520is%2520D.%2522%253B%2520%2520%2520%2520%250A%257D%2520else%2520%257B%250A%2520%2520%2520%2520echo%2520%2522Sorry%252C%2520you%2520got%2520grade%2520F.%2522%253B%2520%250A%257D%250A%250A%253F%253E%250A%2520%2520%250A%2520%252F*%250A%2520%250A%2520Output%250A%2520Your%2520grade%2520is%2520B.%250A%2520%250A%2520*%252F"
+            style="width: 762px; height: 618px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>ในตัวอย่าง เป็นโปรแกรมคำนวณเกรดโดยการคำนวณจากคะแนนที่มี เราใช้คำสั่งตรวจสอบเงือนไข If-Else แบบหลายทางเลือกในการสร้างเงือนไขใสแต่ละช่วงคะแนนและเกรดที่จะได้รับ</p>
+          
+
+          <h1>คำสั่ง Switch</h1>
+          <p>ในภาษา PHP ยังมีคำสั่งเลือกเงือนไขอีกคำสั่งหนึ่งคือคำสั่ง Switch ซึ่งการทำงานของคำสั่งนี้จะคล้ายกับคำสั่ง If Else-If ซึ่งเป็นการเลือกแบบหลายทางเลือก แต่ในคำสั่ง Switch จะใช้สำหรับเปรียบเทียบกับค่าคงที่โดยตรงที่ไม่ใช่ Expression มาดูตัวอย่างการใช้งาน</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250A%2524abb%2520%253D%2520%2522th%2522%253B%250A%250Aswitch%2520%28%2524abb%29%2520%257B%250A%2520%2520%2520%2520case%2520%2522de%2522%253A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2524country%2520%253D%2520%2522Germany%2522%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520break%253B%250A%2520%2520%2520%2520case%2520%2522th%2522%253A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2524country%2520%253D%2520%2522Thailand%2522%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520break%253B%250A%2520%2520%2520%2520case%2520%2522hu%2522%253A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2524country%2520%253D%2520%2522Hungary%2522%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520break%253B%250A%2520%2520%2520%2520case%2520%2522tr%2522%253A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2524country%2520%253D%2520%2522Turkey%2522%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520break%253B%250A%2520%2520%2520%2520default%253A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2524country%2520%253D%2520%2522Unknown%2520country%2522%253B%250A%257D%250A%250Aecho%2520%2522Your%2520country%2520is%2520%2524country.%2522%253B%250A%250A%253F%253E%250A%2520%2520%250A%2520%252F*%250A%2520%250A%2520Output%250A%2520Your%2520country%2520is%2520Thailand.%250A%2520%250A%2520*%252F"
+            style="width: 762px; height: 748px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>ในตัวอย่างเป็นโปรแกรมในการหาชื่อประเทศจากรหัสย่อโดยการใช้คำสั่ง Switch เรามีตัวแปร $abb สำหรับเก็บรหัสย่อของประเทศในโลก ในการใช้งานจะส่งเป็นอากิวเมนต์เข้าไปยังคำสั่ง Switch และโปรแกรมจะทำการตรวจสอบกับเงือนไขในแต่ละ case เมื่อเงือนไขตรงกับ Case ใดๆ โปรแกรมจะทำงานคำสั่งหลังจาก Case นั้นจนสิ้นสุดบล็อคคำสั่ง Switch เราจำเป็นต้องใช้คำสั่ง break เพื่อหยุดการทำงานของโปรแกรมสำหรับแต่ละ Case</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section5" id="Loop">
+    <div class="container">
+      <div class="row">
+        <h1 class="mb-5">คำสั่งวนซ้ำ</h1>
+        <div class="col-md-12 content1">
+          <h1>PHP Loops</h1>
+          <p>ในบทนี้ คุณจะได้เรียนรู้เกี่ยวกับคำสั่งวนซ้ำในภาษา PHP ซึ่งประกอบไปด้วยคำสั่ง While Do While และ For loop ซึ่งเป็นคำสั่งที่ใช้ในการควบคุมโปรแกรมให้ทำงานในรูปแบบที่ซ้ำๆ ภายใต้เงือนไขที่เปลี่ยนไป</p>
+            
+          <h1>คำสั่ง while loop</h1>
+          <p><b>คำสั่ง While loop </b> คือคำสั่งวนซ้ำที่พื้นฐานที่สุดในภาษา PHP มันใช้สำหรับควบคุมการทำงานของโปรแกรมให้ทำงานซ้ำๆ ภายใต้เงือนไขที่กำหนด นี่เป็นรูปแบบของการใช้งานคำสั่ง While loop ในภาษา PHP</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=while%2520%28expression%29%250A%2520%2520%2520%2520statements"
+            style="width: 762px; height: 208px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>ในการทำงานของคำสั่ง While loop จะทำงานในขณะที่ expression เป็นจริง ซึ่ง statements เป็นคำสั่งภายในบล็อคของ While loop ที่อาจจะประกอบไปด้วยหนึ่งหรือหลายคำสั่ง มาดูตัวอย่างการใช้งานคำสั่ง While loop ในภาษา PHP</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250A%2524i%2520%253D%25201%253B%250A%250Awhile%2520%28%2524i%2520%253C%253D%252010%29%2520%257B%250A%2520%2520%2520%2520echo%2520%2522%2524i%255Cn%2522%253B%250A%2520%2520%2520%2520%2524i%252B%252B%253B%250A%257D%250A%250A%253F%253E%250A%2520%2520%250A%2520%252F*%250A%2520Output%250A%2520%25201%250A%2520%25202%250A%2520%25203%250A%2520%25204%250A%2520%25205%250A%2520%25206%250A%2520%25207%250A%2520%25208%250A%2520%25209%250A%2520%252010%250A%2520%250A%2520*%252F"
+            style="width: 762px; height: 636px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+            
+          </div>
+         <p>นี่เป็นผลลัพธ์ของโปรแกรม ซึ่งเราได้แสดงตัวเลข 1 - 10 ออกทางหน้าจอ คุณอาจจะลองเขียนโปรแกรมเพื่อแสดงตัวเลขจาก 30 - 50 โดยการเปลี่ยนตัวแปร $i = 30 และเงื่อนไขเป็น $i &lt;= 50 และดูว่ามันน่าทึ่งแค่ไหน</p>
+
+
+
+          <h1>คำสั่ง do while loop</h1>
+          <p><b>คำสั่ง Do while loop</b> นั้นมีการทำงานคล้ายกับคำสั่ง While loop แต่สิ่งที่แตกต่างคือในคำสั่ง Do while loop จะทำงานภายใน Loop ก่อนอย่างน้อยหนึ่งรอบและตรวจสอบเงือนไขในภายหลัง นี่เป็นรูปแบบของการใช้งานคำสั่ง Do while loop ในภาษา PHP</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=do%2520%257B%250A%2520%2520%2520%2520statements%250A%257D%2520while%2520%28expression%29%253B"
+            style="width: 762px; height: 227px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>ในการใช้งานคำสั่ง Do while loop นั้นส่วนของการตรวจสอบเงื่อนไข expression จะอยู่ตอนท้าย นั่นหมายความจะต้องมีการทำงานในลูปอย่างน้อยแน่นอน 1 รอบ มาดูตัวอย่างการใช้งานคำสั่ง Do while loop ในภาษา PHP กับโปรแกรมการสุ่มตัวเลข</p>
+          
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250Ado%2520%257B%250A%2520%2520%2520%2520%2524number%2520%253D%2520rand%280%252C%25208%29%253B%250A%2520%2520%2520%2520echo%2520%2522Random%2520number%2520%2524number%255Cn%2522%253B%250A%257D%2520while%2520%28%2524number%2520%21%253D%25200%29%253B%250A%250A%253F%253E%250A%2520%2520%250A%252F*%250AOutput%250A%250ARandom%2520number%25201%250ARandom%2520number%25201%250ARandom%2520number%25203%250ARandom%2520number%25202%250ARandom%2520number%25206%250ARandom%2520number%25201%250ARandom%2520number%25205%250ARandom%2520number%25206%250ARandom%2520number%25200%250AYeah%21%2520Random%2520stopped%252C%2520catch%2520up%25200.%250A%250A*%252F"
+            style="width: 762px; height: 618px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>นี่เป็นผลลัพธ์ของโปรแกรม ซึ่งในบางสถานการณ์ของการเขียนโปรแกรม คุณอาจจะต้องใช้คำสั่ง Do while loop เพื่ออำนวยความสะดวก เช่น การทำงานที่เงื่อนไขต้องขึ้นกับค่าก่อนหน้าในโปรแกรม อย่างไรก็ตามทั้งคำสั่ง While loop และ Do while loop สามารถใช้แทนกันได้ ในตัวอย่างข้างต้นนี่เป็นโค้ดเมื่อเราเขียนโดยใช้คำสั่ง While loop</p>
+          
+
+          <h1>คำสั่ง for loop</h1>
+          <p><b>คำสั่ง For loop</b> คือคำสั่งวนซ้ำที่มีการทำงานในจำนวนรอบที่แน่นอน ซึ่งสามารถกำหนดค่าเริ่มต้น เงื่อนไข และการเปลี่ยนแปลงไว้ที่เดียวกันในตอนต้นของ Loop ทำให้การเขียนโปรแกรมสั้นและกระทัดรัดขึ้น นี่เป็นรูปแบบของการใช้งานคำสั่ง For loop ในภาษา PHP</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=for%2520%28initializing%253B%2520expression%253B%2520updating%29%250A%2520%2520%2520%2520statements"
+            style="width: 762px; height: 208px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>โดยที่ initializing เป็นการกำหนดค่าเริ่มต้นสำหรับการทำงานของ Loop expression เป็นเงื่อนไขที่จะให้ทำงานภายใน Loop updating เป็นการเปลี่ยนแปลงของข้อมูลเมื่อเสร็จการทำงานแต่ละรอบของ Loop มาดูตัวอย่างการใช้งานคำสั่ง For loop ในภาษา PHP</p>
+          
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250Afor%2520%28%2524i%2520%253D%25201%253B%2520%2524i%2520%253C%253D%252010%253B%2520%2524i%252B%252B%29%2520%257B%250A%2520%2520%2520%2520echo%2520%2522%2524i%252C%2520%2522%253B%250A%257D%250Aecho%2520%2522%255Cn%2522%253B%250A%250Afor%2520%28%2524i%2520%253D%25200%253B%2520%2524i%2520%253C%253D%252050%253B%2520%2524i%2520%252B%253D%25205%29%2520%257B%250A%2520%2520%2520%2520echo%2520%2522%2524i%252C%2520%2522%253B%250A%257D%250Aecho%2520%2522%255Cn%2522%253B%250A%250Afor%2520%28%2524i%2520%253D%252010%253B%2520%2524i%2520%253E%253D%2520-10%253B%2520%2524i%2520-%253D%25202%29%2520%257B%250A%2520%2520%2520%2520echo%2520%2522%2524i%252C%2520%2522%253B%250A%257D%250Aecho%2520%2522%255Cn%2522%253B%250A%250A%253F%253E%250A%2520%2520%250A%252F*%250AOutput%250A%250A1%252C%25202%252C%25203%252C%25204%252C%25205%252C%25206%252C%25207%252C%25208%252C%25209%252C%252010%252C%250A0%252C%25205%252C%252010%252C%252015%252C%252020%252C%252025%252C%252030%252C%252035%252C%252040%252C%252045%252C%252050%252C%250A10%252C%25208%252C%25206%252C%25204%252C%25202%252C%25200%252C%2520-2%252C%2520-4%252C%2520-6%252C%2520-8%252C%2520-10%252C%250A%250A*%252F"
+            style="width: 762px; height: 674px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>ในตัวอย่าง เป็นการใช้งานคำสั่ง For loop เพื่อแสดงตัวเลข ซึ่งคุณจะเห็นว่าเราได้กำหนดค่าเริ่มต้น เงือนไข และการเปลี่ยนแปลงในตอนต้นของ Loop ทำให้คำสั่ง For loop เป็นคำสั่งที่สะดวกและง่ายต่อการใช้งาน ในลูปแรกเป็นการแสดงตัวเลขตั้งแต่ 1 - 10 ลูปที่สองเป็นการแสดงตัวเลขตั้งแต่ 0 - 50 โดยเพิ่มค่าทีละ 5 และในลูปสุดท้าย เป็นการแสดงตัวเลขจาก 10 - -10 โดยลดค่าทีละ 2</p>
+
+
+          <h1>คำสั่ง foreach loop</h1>
+          <p><b>คำสั่ง Foreach loop</b> ถูกออกแบบมาให้ใช้งานกับอาเรย์ มันใช้สำหรับวนอ่านค่าในอาเรย์โดยจะเริ่มจากสมาชิกตัวแรกจนถึงสมาชิกตัวสุดท้าย มาดูตัวอย่างการใช้งาน Foreach ในภาษา PHP</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250A%252F%252F%2520foreach%2520with%2520normal%2520array%250A%2524numbers%2520%253D%2520%255B10%252C%252020%252C%252030%252C%252040%252C%252050%255D%253B%250Aforeach%2520%28%2524numbers%2520as%2520%2524el%29%2520%257B%250A%2520%2520%2520%2520echo%2520%2522%2524el%255Cn%2522%253B%250A%257D%250A%250A%250A%253F%253E%250A%2520%2520%250A%252F*%250AOutput%250A%250A10%250A20%250A30%250A40%250A50%250A%250A*%252F"
+            style="width: 762px; height: 562px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>ในตัวอย่างเป็นการใช้คำสั่ง Foreach ทั้งการอ่านค่าจากอาเรย์แบบปกติและแบบ Key value โดยการทำงานของคำสั่ง Foreach จะวนอ่านค่าภายในอาเรย์ตั้งแต่สมาชิกตัวแรกจนถึงตัวสุดท้าย ในแต่ละรอบของการทำงานข้อมูลจะถูกเก็บในตัวแปร $el </p>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section5" id="Functions">
+    <div class="container">
+      <div class="row">
+        <h1 class="mb-5">ฟังก์ชัน</h1>
+        <div class="col-md-12 content1">
+          <h1>ฟังก์ชันคืออะไร</h1>
+          <p><b>ฟังก์ชัน (Functions) </b>คือส่วนของโปรแกรมหรือซอสโค้ดที่ใช้สำหรับจัดการกับงานที่เฉพาะเจาะจง ฟังก์ชันเป็นขั้นตอนของการทำงานบางอย่างเพื่อให้ได้ผลลัพธ์ตามที่ต้องการโดยการเรียกใช้ฟังก์ชัน ในภาษา PHP มีฟังก์ชันมาตรฐานที่คุณสามารถใช้งานได้ ซึ่งเรียกว่า Predefined function ซึ่งแน่นอนฟังก์ชันเหล่านี้มีไว้สำหรับจัดการงานทั่วไปเท่านั้น ในบทนี้เราจะพูดเกี่ยวกับฟังก์ชันที่สร้างจากผู้ใช้ (User-defined function)</p>
+          <p>ฟังก์ชันมีส่วนประกอบสองอย่างคือส่วนหัวของฟังก์ชัน (head) และส่วนการทำงานของฟังก์ชัน (function body) ในภาษา PHP เรากำหนดจำนวนของพารามิเตอร์ของฟังก์ชันที่ส่วนหัว และการทำงานของฟังก์ชันในส่วนการทำงาน ซึ่งฟังก์ชันอาจจะมีการส่งค่ากลับหรือไม่มีก็ได้ (return) นี่เป็นรูปแบบของการประกาศฟังก์ชันในภาษา PHP</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=function%2520name%28parameters%29%2520%257B%250A%2520%2520%2520%2520statements%250A%2520%2520%2520%2520return%2520value%2520%28optional%29%250A%257D"
+            style="width: 762px; height: 245px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>ในการสร้างฟังก์ชันในภาษา PHP เราใช้คำสั่ง <b>function</b> และตามด้วยชื่อของฟังก์ชันซึ่งมีหลักการตั้งชื่อเหมือนกับตัวแปร parameters เป็นการกำหนดพารามิเตอร์ของฟังก์ชัน ซึ่งอาจจะมีหรือไม่มีก็ได้ ภายในบล็อคการทำงานของฟังก์ชัน <b>{}</b> เป็นขั้นตอนการทำงานของฟังก์ชัน และคำสั่ง <b>return</b> ใช้สำหรับส่งค่ากลับซึ่งเป็นทางเลือก</p>
+
+          <h1>การเรียกใช้งานฟังก์ชัน</h1>
+          <p>หากต้องการเรียกใช้ฟังก์ชัน เพียงเขียนชื่อตามด้วยวงเล็บ ():</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=function%2520myMessage%28%29%2520%257B%250A%2520%2520echo%2520%2522Hello%2520world%21%2522%253B%250A%257D%250A%250AmyMessage%28%29%253B"
+            style="width: 762px; height: 264px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <h1>ฟังก์ชันกับค่าเริ่มต้นของพารามิเตอร์</h1>
+          <p>โดยปกติแล้วในการส่งค่าอากิวเมนต์เข้ามายังฟังก์ชัน จำนวนของค่าที่ส่งต้องตรงกันกับพารามิเตอร์ของฟังก์ชัน ในภาษา PHP คุณสามารถสร้างพารามิเตอร์กับค่าเริ่มต้นได้ หรือที่เรียกกันว่า Default argument ซึ่งเป็นทางเลือกในการเรียกใช้งานฟังก์ชัน มาดูตัวอย่างของ Default argument ในภาษา PHP</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=function%2520setHeight%28%2524minheight%2520%253D%252050%29%2520%257B%250A%2520%2520echo%2520%2522The%2520height%2520is%2520%253A%2520%2524minheight%2520%253Cbr%253E%2522%253B%250A%257D%250A%250AsetHeight%28350%29%253B%250AsetHeight%28%29%253B%2520%252F%252F%2520will%2520use%2520the%2520default%2520value%2520of%252050%250AsetHeight%28135%29%253B%250AsetHeight%2880%29%253B"
+            style="width: 762px; height: 320px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section5" id="Array">
+    <div class="container">
+      <div class="row">
+        <h1 class="mb-5">PHP Arrays</h1>
+        <div class="col-md-12 content1">
+          <h1>อาเรย์คืออะไร</h1>
+          <p><b>อาเรย์ (Array)</b> คือประเภทข้อมูลที่เก็บข้อมูลเป็นชุดลำดับเรียงต่อกันในหน่วยความจำ อาเรย์เป็นตัวแปรประเภทหนึ่งในภาษา PHP ที่สามารถเก็บข้อมูลได้มากกว่าหนึ่งค่า อาเรย์ช่วยอำนวยความสะดวกในกรณีที่เราต้องการจัดการข้อมูลประเภทเดียวกันเป็นจำนวนมาก ยกตัวอย่างเช่น คุณต้องการเก็บคะแนนของนักเรียน 10 คน การใช้อาเรย์จึงเป็นสิ่งที่สะดวก</p>
+          <p>อาเรย์ในภาษา PHP นั้นสามารถเก็บข้อมูลได้ทุกประเภททั้ง Primitive type ออบเจ็คและ Resource อาเรย์สามารถมีได้หลายมิติหรือเราเรียกว่าอาเรย์ของอาเรย์ นอกจากนี้อาเรย์ยังมีฟังก์ชันอำนวยความสะดวกในการจัดการข้อมูลมากมายในภาษา PHP</p>
+
+          <h1>ประกาศและใช้งานอาเรย์</h1>
+          <p>คุณสามารถมีข้อมูลประเภทต่างๆ ในอาร์เรย์เดียวกันได้</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2524myArr%2520%253D%2520array%28%2522Volvo%2522%252C%252015%252C%2520%255B%2522apples%2522%252C%2520%2522bananas%2522%255D%252C%2520myFunction%29%253B%250A"
+            style="width: 762px; height: 208px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+          </iframe>
+          </div>
+
+          <h1>การใช้คำสั่ง For loop กับอาเรย์</h1>
+          <p>เนื่องจากอาเรย์นั้นเก็บข้อมูลเป็นลำดับและมีการเข้าถึงผ่าน Index ดังนั้นคำสั่ง For loop กับอาเรย์จึงเป็นสิ่งที่จำเป็นในการเขียนโปรแกรม ซึ่งโดยทั่วไปแล้วในการเขียนโปรแกรม เรามักจะใช้คำสั่ง For loop กับอาเรย์เสมอ</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250A%2524numbers%2520%253D%2520%255B%255D%253B%250A%250Afor%2520%28%2524i%2520%253D%25200%253B%2520%2524i%2520%253C%252010%253B%2520%2524i%252B%252B%29%2520%257B%250A%2520%2520%2520%2520%2524numbers%255B%255D%2520%253D%2520rand%281%252C%2520100%29%253B%250A%257D%250A%250Aecho%2520%2522Random%2520numbers%253A%2520%2522%253B%250Afor%2520%28%2524i%2520%253D%25200%253B%2520%2524i%2520%253C%252010%253B%2520%2524i%252B%252B%29%2520%257B%250A%2520%2520%2520%2520echo%2520%2524numbers%255B%2524i%255D%252C%2520%2522%252C%2520%2522%253B%250A%257D%250A%250A%253F%253E%250A%2520%2520%250A%2520%252F*%250A%2520Output%250A%2520Random%2520numbers%253A%25207%252C%252092%252C%252039%252C%252032%252C%252075%252C%252067%252C%252023%252C%252029%252C%25208%252C%252073%252C%250A%250A%2520%250A%2520*%252F"
+            style="width: 762px; height: 562px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <h1>การใช้คำสั่ง Foreach loop กับอาเรย์</h1>
+          <p><b>คำสั่ง Foreach loop </b>ถูกออกแบบมาให้ใช้งานกับอาเรย์ มันใช้สำหรับวนอ่านค่าในอาเรย์โดยจะเริ่มจากสมาชิกตัวแรกจนถึงสมาชิกตัวสุดท้าย มาดูตัวอย่างการใช้งาน Foreach ในภาษา PHP</p>
+
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250A%252F%252F%2520foreach%2520with%2520normal%2520array%250A%2524numbers%2520%253D%2520%255B10%252C%252020%252C%252030%252C%252040%252C%252050%255D%253B%250Aforeach%2520%28%2524numbers%2520as%2520%2524el%29%2520%257B%250A%2520%2520%2520%2520echo%2520%2522%2524el%255Cn%2522%253B%250A%257D%250A%250A%253F%253E"
+            style="width: 762px; height: 339px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- footer -->
+
+  <div class="container-fuild">
+    <footer class="footer">
+      <p>© Copyrights. All rights reserved.</p>
+    </footer>
+  </div>
+  
+
+  
+
+
+    
+
+
+    
+</body>
+</html>

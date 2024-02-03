@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Learn PHP - Project</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+
+  <nav class="navbar navbar-cus navbar-expand-lg fixed-top">
+      <div class="container">
+
+        <a class="navbar-brand" href="index.html">PHP</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="intro.html">Introduction</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="install.html">Install</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="basic.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PHP Basic
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="basic.html">Syntax</a></li>
+                <li><a class="dropdown-item" href="basic.html">Echo/Print</a></li>
+                <li><a class="dropdown-item" href="basic.html">Variables</a></li>
+                <li><a class="dropdown-item" href="basic.html">Data Type</a></li>
+                <li><a class="dropdown-item" href="basic.html">Operator</a></li>
+                <li><a class="dropdown-item" href="basic.html">if...else Statement</a></li>
+                <li><a class="dropdown-item" href="basic.html">Loops</a></li>
+                <li><a class="dropdown-item" href="basic.html">Functions</a></li>
+                <li><a class="dropdown-item" href="basic.html">Arrays</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="advanced.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PHP Advanced
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#sessions">Sessions</a></li>
+                <li><a class="dropdown-item" href="#form">GET/POST</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="reference.html">Reference</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+  </nav>
+
+   
+
+    <!-- Header -->
+
+  <div class="container-fuild">
+      <div class="header" id="home">
+          <div class="content-header">
+
+              <h1>Advanced PHP</h1>
+              <h3>ในบทนี้ คุณจะได้เรียนรู้โครงสร้างที่ลึกมากกว่าเดิมที่คุณต้องต้องทราบในการเขียนโปรแกรมด้วยภาษา PHP <br>รูปแบบและกฏเกณฑ์ต่างๆ ในการเขียนโปรแกรมด้วยภาษา PHP</h3>
+              <p>มาเริ่มต้นกับการเขียนโปรแกรมที่ Advanced กัน</p>
+              <a href="#sessions"><button type="button" class="btn mt-5">Get Started</button></a>
+          </div>
+      </div>
+  </div>
+
+
+
+  <!-- Content -->
+
+  <div class="section5" id="sessions">
+    <div class="container">
+      <div class="row">
+        <h1 class="mb-5 mt-5">การใช้งาน session (เซสชั่น) เบื้องต้นใน PHP</h1>
+        <div class="col-md-12 content1">
+          <h1>SESSION ใน PHP คืออะไร? </h1>
+          <p><b>Session หรือ Web Session </b>เป็น value ที่จะถูกสร้างขึ้นมาเมื่อ Client มีการเปิดเว็บบราวเซอร์และติดต่อกับ URL ของเว็บไซต์นั้น เมื่อ Client ปิดตัวลง session จะถูกทำลายหรือปิดลง ข้อมูลจะถูกบันทึกลง session ในฝั่ง server สามารถเก็บค่าข้อความหรือตัวเลข และตัวแปรที่เป็น Object ต่างๆ ได้ แต่มีความพิเศษคือ ค่าตัวแปรจะยังคงอยู่ไม่ว่าจะเปลี่ยนหน้าไปหน้าใดก็ตาม</p>
+          <p><b>Session</b> นิยมนำมาใช้ในการรับส่งค่าข้อมูลที่เก็บเป็นความลับที่จะต้องใช้ในการระบุตัวตนโดยใช้สิทธิ การยืนยันตัวตนด้วย Username และ Password เพื่อให้ได้ค่าตัวแปรนี้มาระบุตัวตน ตัวแปรเซสชั่นจึงมีความปลอดภัยในการเก็บรักษาข้อมูลได้อย่างมาก</p>
+
+            <div class="con-img mb-3">
+                <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--UcdjcWFO--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/95ialyrlxjnprg2btnva.png" alt="">
+            </div>
+
+            <div class="txt mb-5">
+                <p>อ้างอิงรูปภาพจาก https://dev.to/dennis1001/understanding-cookies-and-sessions-in-php-35k5</p>
+            </div>
+
+          <h1>Start a PHP Session</h1>
+          <h3>เริ่มต้นใช้เซสชั่น (Session)</h3>
+          <p>ก่อนการใช้งานตัวแปรเซสชั่น เพื่อโหลดข้อมูลเซสชั่น (session) มาเก็บไว้ที่หน่วยความจำ ต้องใช้คำสั่งเพื่อเปิดเซสชั่นดังนี้</p>
+          <div class="con-code">
+            <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=761.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%252F%252F%2520start%2520a%2520session%2520%250Asession_start%28%29%253B%250A%2520%250A%252F%252F%2520manipulate%2520session%2520variables%2520%250A%253F%253E"
+            style="width: 762px; height: 283px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+            </iframe>
+        
+          </div>
+
+          <h3>ถ้าหากเราจะสร้างหรือเก็บข้อมูลลง session ต้องทำอย่างไร?</h3>
+
+          <p>ใช้ไฟล์ php เพื่อติดต่อกับ session ฝั่ง Server และส่ง html ไปยังฝั่ง Client ตัวอย่าง สร้างไฟล์ demo_session1.php</p>
+          <p><b>ตัวอย่าง</b> ส่วนกำหนดตัวแปรเซสชั่น (session)</p>
+
+          <div class="con-code">
+            <iframe
+              src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=602.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250Asession_start%28%29%253B%250A%250A%250A%252F%252F%2520Set%2520session%2520variables%250A%2524_SESSION%255B%2522favcolor%2522%255D%2520%253D%2520%2522green%2522%253B%250A%2524_SESSION%255B%2522favanimal%2522%255D%2520%253D%2520%2522cat%2522%253B%250A%250Aecho%2520%2522Session%2520variables%2520are%2520set.%2522%253B%250A%250A%250A%250A%253F%253E%250A"
+              style="width: 603px; height: 450px; border:0; transform: scale(1); overflow:hidden;"
+              sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          
+          </div>
+
+          <ul class="mb-5">
+            <li class="mb-2"> <b>session_start() </b>คือ ประกาศสร้าง session ต้องสร้างเป็นอันดับแรกเสมอ ฟังก์ชัน session_start() ต้องเป็นสิ่งแรกสุดก่อนแท็ก HTML ใดๆ</li>
+            <li> <b>$_SESSION </b> คือ การใช้เรียกงาน session ไม่ว่าจะเป็นการเก็บข้อมูลหรือนำ session ไปใช้งานอย่างอื่น</li>
+
+          </ul>
+
+          <h1>Get PHP Session Variable Values</h1>
+          <p>ต่อไป เราจะสร้างอีกหน้าชื่อ "demo_session2.php" จากหน้านี้ เราจะเข้าถึงข้อมูลเซสชันที่เราตั้งค่าไว้ในหน้าแรก ("demo_session1.php")</p>
+          <p>โปรดสังเกตว่าตัวแปรเซสชันจะไม่ถูกส่งแยกกันไปยังแต่ละหน้าใหม่ แต่จะถูกดึงมาจากเซสชันที่เราเปิดที่จุดเริ่มต้นของแต่ละหน้าแทน (session_start())</p>
+          <p>โปรดสังเกตด้วยว่าค่าตัวแปรเซสชันทั้งหมดถูกเก็บไว้ในตัวแปร <b>$_SESSION</b></p>
+          <p><b>ตัวอย่าง</b> ส่วนแสดงผลตัวแปรเซสชั่น (session)</p>
+
+          <div class="con-code">
+            <iframe
+              src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=894.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%252F%252F%2520Start%2520the%2520session%250A%250Asession_start%28%29%253B%250A%253F%253E%250A%253C%21DOCTYPE%2520html%253E%250A%253Chtml%253E%250A%253Cbody%253E%250A%250A%253C%253Fphp%250A%252F%252F%2520Echo%2520session%2520variables%2520that%2520were%2520set%2520on%2520previous%2520page%250Aecho%2520%2522Favorite%2520color%2520is%2520%2522%2520.%2520%2524_SESSION%255B%2522favcolor%2522%255D%2520.%2520%2522.%253Cbr%253E%2522%253B%250Aecho%2520%2522Favorite%2520animal%2520is%2520%2522%2520.%2520%2524_SESSION%255B%2522favanimal%2522%255D%2520.%2520%2522.%2522%253B%250A%250A%253F%253E%250A%250A%253C%252Fbody%253E%250A%253C%252Fhtml%253E"
+              style="width: 895px; height: 506px; border:0; transform: scale(1); overflow:hidden;"
+              sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <div class="row mt-3 mb-5">
+            <h3>ผลลัพธ์</h3>
+            <div class="col-md-6 p-4">
+              <p> 1. เปิดหน้า demo_session1.php</p>
+                <div class="con-img">
+                  <img src="img/img5-1.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-6 p-4">
+              <p> 2. เปิดหน้า demo_session2.php</p>
+                <div class="con-img">
+                  <img src="img/img5-2.png" alt="">
+                </div>
+            </div>
+          </div>
+
+          <div class="con-txt2 mb-5">
+            <h3>มันทำงานอย่างไร? มันรู้ได้ยังไงว่าเป็นฉัน?</h3>
+            <p>เซสชันส่วนใหญ่จะตั้งค่ารหัสผู้ใช้บนคอมพิวเตอร์ของผู้ใช้ที่มีลักษณะดังนี้: 765487cf34ert8dede5a562e4f3a7e12 จากนั้น เมื่อมีการเปิดเซสชันในหน้าอื่น ระบบจะสแกนคอมพิวเตอร์เพื่อหารหัสผู้ใช้ หากมีการจับคู่ จะเข้าถึงเซสชันนั้น หากไม่ตรงกัน จะเริ่มเซสชันใหม่</p>
+
+          </div>
+
+
+          <h1>Destroy a PHP Session</h1>
+          <p>หากต้องการลบตัวแปรเซสชันทั่วโลกทั้งหมดและทำลายเซสชัน ให้ใช้ <b>session_unset() และ session_destroy()</b></p>
+          <p><b>ตัวอย่าง</b> การลบค่าเซสชั่น (session)</p>
+
+          <div class="con-code">
+            <iframe
+              src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=740.5&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250Asession_start%28%29%253B%250A%250A%252F%252F%2520remove%2520all%2520session%2520variables%250Asession_unset%28%29%253B%250A%250A%252F%252F%2520destroy%2520the%2520session%250Asession_destroy%28%29%253B%250A%250A%253F%253E%250A"
+              style="width: 741px; height: 376px; border:0; transform: scale(1); overflow:hidden;"
+              sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="section5" id="form">
+    <div class="container">
+      <div class="row">
+        <h1 class="mb-5 mt-5">การส่งข้อมูลจากฟอร์ม (form) แบบ GET vs POST </h1>
+        <div class="col-md-12 content1">
+          <h1>การส่งข้อมูลจากฟอร์ม (form) แบบ GET </h1>
+          <p>ส่งข้อมูล<b>แนบต่อท้าย URL ในแบบ Query String ทำให้ผู้ใช้งานสามารถมองเห็นข้อมูลที่ส่งไปได้ </b>เหมาะสำหรับการส่งข้อมูลสั้นๆ ไม่เกิน 256 ตัว</p>
+
+          <div class="con-code">
+            <iframe
+              src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=836&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%252F%252F%25E0%25B9%2584%25E0%25B8%259F%25E0%25B8%25A5%25E0%25B9%258C%25E0%25B8%259B%25E0%25B8%25A5%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B8%2597%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%2597%25E0%25B8%25B5%25E0%25B9%2588%25E0%25B9%2583%25E0%25B8%258A%25E0%25B9%2589%25E0%25B8%25AA%25E0%25B8%25B3%25E0%25B8%25AB%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%259A%25E0%25B9%2580%25E0%25B8%2582%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B8%2599%25E0%25B8%25AA%25E0%25B8%2584%25E0%25B8%25B4%25E0%25B8%259B%25E0%25B8%2595%25E0%25B9%258C%2520PHP%250A%253Cform%2520action%253D%2522welcome.php%2522%2520method%253D%2522get%2522%253E%2520%2520%2520%250A%2520%2520%2520%2520Name%253A%2520%253Cinput%2520type%253D%2522text%2522%2520name%253D%2522name1%2522%2520%252F%253E%2520%2520%2520%2520%2520%250A%2520%2520%2520%2520Age%253A%2520%253Cinput%2520type%253D%2522text%2522%2520name%253D%2522age1%2522%2520%252F%253E%250A%2520%2520%2520%2520%253Cinput%2520type%253D%2522submit%2522%2520%252F%253E%250A%253C%252Fform%253E"
+              style="width: 836px; height: 283px; border:0; transform: scale(1); overflow:hidden;"
+              sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>ส่วนของ PHP ที่ได้จากฟอร์ม (form) ไปประมวลผล ในการจะรับข้อมูลแบบ GET นั้น ฟอร์ม (form) ที่ส่งข้อมูลมา จะต้องกำหนด method="get" จะใช้ตัวแปร <b>$_GET</b> ในการรับข้อมูล อ้างอิงถึง name ของ tag นั้นๆ</p>
+
+
+          <div class="con-code">
+            <iframe
+              src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=836&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cform%253E%250A%2520%2520%2520%2520Welcome%2520%253C%253Fphp%2520echo%2520%2524_GET%255B%2522name1%2522%255D%253B%2520%253F%253E.%253Cbr%253E%250A%2509You%2520are%2520%253C%253Fphp%2520echo%2520%2524_GET%255B%2522age1%2522%255D%253B%2520%253F%253E%2520years%2520old%21%250A%253C%252Fform%253E"
+              style="width: 836px; height: 245px; border:0; transform: scale(1); overflow:hidden;"
+              sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <h3>ผลลัพธ์</h3>
+          <p>ส่วนของ PHP ที่ได้จากฟอร์ม (form) จะส่งข้อมูลแนบต่อท้าย URL มาด้วย</p>
+          <div class="con-img mb-5">
+            <img src="img/img6-1.png" alt="">
+          </div>
+
+          <br>
+   
+          <h1>การส่งข้อมูลจากฟอร์ม (form) แบบ POST </h1>
+          <p>ส่งข้อมูล<b>ไม่แสดงข้อมูลที่ส่งไปให้เห็นผ่าน URL </b> เหมาะสำหรับการส่งข้อมูลแบบยาวๆ เพราะไม่มีข้อจำกัดของเรื่องขนาดของข้อมูลที่ส่ง และต้องการความปลอดภัย</p>
+
+          <div class="con-code">
+            <iframe
+              src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=836&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cform%2520action%253D%2522welcome.php%2522%2520method%253D%2522post%2522%253E%250A%2520%2520%2520%2520%25E0%25B8%258A%25E0%25B8%25B7%25E0%25B9%2588%25E0%25B8%25AD%2520%253Cinput%2520type%253D%2522text%2522%2520name%253D%2522name%2522%253E%250A%2520%2520%2520%2520%253Cinput%2520type%253D%2522submit%2522%2520value%253D%2522%25E0%25B8%2595%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B8%2587%2522%253E%250A%253C%252Fform%253E"
+              style="width: 836px; height: 245px; border:0; transform: scale(1); overflow:hidden;"
+              sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <p>ส่วนของ PHP ที่ได้จากฟอร์ม (form) ไปประมวลผล ในการรับข้อมูลในการจะรับข้อมูลแบบ POST นั้น ฟอร์ม(form) ที่ส่งข้อมูลมา จะต้องกำหนด method="post" ในภาษา PHP จะใช้ตัวแปร <b>$_POST</b> ในการรับข้อมูล อ้างอิงถึง name ของ tag นั้นๆ</p>
+
+
+          <div class="con-code">
+            <iframe
+              src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=836&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%2520%2520%2520%2520isset%28%2520%2524_POST%255B%27name%27%255D%2520%29%2520%253F%2520%2524name%2520%253D%2520%2524_POST%255B%27name%27%255D%2520%253A%2520%2524name%2520%253D%2520%2522%2522%253B%250A%2520%2520%2520%2520if%28%2520%21empty%28%2520%2524name%2520%29%2520%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520echo%2520%2522%253Cdiv%253E%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%259A%25E0%25B8%2584%25E0%25B9%2588%25E0%25B8%25B2%2520name%2520%253D%2520%257B%2524name%257D%2520%25E0%25B8%2594%25E0%25B9%2589%25E0%25B8%25A7%25E0%25B8%25A2%25E0%25B8%2584%25E0%25B8%25B3%25E0%25B8%25AA%25E0%25B8%25B1%25E0%25B9%2588%25E0%25B8%2587%2520POST%253C%252Fdiv%253E%2522%253B%250A%2520%2520%2520%2520%257D%2520%2520%2520%2520%250A%253F%253E"
+              style="width: 836px; height: 283px; border:0; transform: scale(1); overflow:hidden;"
+              sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+
+          <h3>ผลลัพธ์</h3>
+          <p>การส่งค่าไปหน้าอื่นด้วย post จะเป็นการส่งค่าผ่านแท็ก form ร่วมกับปุ่ม submit จากตัวอย่างโค้ด input text มีตัวแปรชื่อ name เมื่อผู้ใช้งานกรอกข้อมูล และกดปุ่ม submit ตัวแปร name จะถูกส่งไปที่ไฟล์ที่กำหนด จากนั้นรับค่าด้วย $_POST['name'] หมายความว่ารับค่าตัวแปรชื่อ name ชนิด post ด้วยคำสั่ง $_POST <b>ส่วนของ PHP ที่ได้จากฟอร์ม (form) จะ ไม่ ส่งข้อมูลแนบต่อท้าย URL มาด้วย</b></p>
+          <div class="con-img mb-5">
+            <img src="img/img6-2.png" alt="">
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- footer -->
+
+  <div class="container-fuild">
+    <footer class="footer">
+      <p>© Copyrights. All rights reserved.</p>
+    </footer>
+  </div>
+  
+
+  
+
+
+    
+
+
+    
+</body>
+</html>

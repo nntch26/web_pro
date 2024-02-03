@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Learn PHP - Project</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+
+  <nav class="navbar navbar-cus navbar-expand-lg fixed-top">
+      <div class="container">
+
+        <a class="navbar-brand" href="index.html">PHP</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="intro.html">Introduction</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="install.html">Install</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="basic.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PHP Basic
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="basic.html">Syntax</a></li>
+                <li><a class="dropdown-item" href="basic.html">Echo/Print</a></li>
+                <li><a class="dropdown-item" href="basic.html">Variables</a></li>
+                <li><a class="dropdown-item" href="basic.html">Data Type</a></li>
+                <li><a class="dropdown-item" href="basic.html">Operator</a></li>
+                <li><a class="dropdown-item" href="basic.html">if...else Statement</a></li>
+                <li><a class="dropdown-item" href="basic.html">Loops</a></li>
+                <li><a class="dropdown-item" href="basic.html">Functions</a></li>
+                <li><a class="dropdown-item" href="basic.html">Arrays</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="advanced.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PHP Advanced
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="advanced.html">Sessions</a></li>
+                <li><a class="dropdown-item" href="advanced.html">GET/POST</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="reference.html">Reference</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+  </nav>
+
+   
+
+    <!-- Header -->
+
+  <div class="container-fuild">
+      <div class="header" id="home">
+          <div class="content-header">
+              <h1>Installation</h1>
+              <h3>ก่อนที่จะเริ่มเขียนโปรแกรมด้วยภาษา PHP คุณจะต้องเตรียมเครื่องมือสำหรับการเขียนโปรแกรมก่อน <br>ซึ่งในบทนี้ เราจะพาคุณติดตั้งสิ่งที่จำเป็นที่ต้องใช้ในการเขียนโปรแกรมด้วยภาษา PHP</h3>
+              <a href="#intro"><button type="button" class="btn mt-5">Get Started</button></a>
+          </div>
+      </div>
+  </div>
+
+
+
+  <!-- Content -->
+
+<div class="section" id="intro">
+    <div class="container">
+        <div class="row">
+            <div class="head-text mb-5">
+                <h1>เครื่องมือในการเขียนภาษา PHP</h1>
+            </div>
+
+            <div class="col-md-12 content-text">
+                <h1>การติดตั้งภาษา PHP</h1>
+                <p class="mb-5">Download PHP version ที่ต้องการ คุณจะต้องดาวน์โหลด PHP binary package ซึ่งดาวน์โหลดได้ที่เว็บไซต์ทางการของ PHP ที่ <a href="http://php.net/downloads.php"><b>http://php.net/downloads.php </b></a> </p>
+                <img src="img/download.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+  <div class="container">
+      <div class="row">
+          <div class="head-text mb-5">
+              <h1>การติดตั้งโปรแกรม XAMPP สำหรับ PHP</h1>
+          </div>
+
+          <div class="col-md-12 content-text">
+              <h1>XAMPP คืออะไร</h1>
+              <p>XAMPP เป็นโปรแกรม Apache web server ไว้จำลอง Web Server เพื่อไว้ทดสอบเว็บไซต์ในเครือของเรา โดยที่ไม่จำเป็นต้องเชื่อมต่ออินเตอร์เน็ต และไม่ต้องเสียค่าใช้จ่ายใด ๆ ทั้งสิ้น แถม่ยังง่ายต่อการติดตั้งและการเข้าใช้งานโปรแกรม ซึ่งจะมาพร้อม PHP, MY SQL, APACHE ที่จะทำหน้าที่เป็นเว็บ Server และยังรวมไปถึง OpenSSL, PhpMyadmin เพื่อเชื่อมต่อไปยังฐานข้อมูล</p>
+              <p class="mb-5">คุณสามารถติดตั้งภาษา PHP ด้วยโปรแกรมที่ชื่อว่า XAMPP ซึ่งเป็น Software package ที่รวบรวมเครื่องมือจำเป็นในการพัฒนาเว็บไซต์ด้วยภาษา PHP ที่ประกอบไปด้วย ภาษา PHP Apache และ MySQL database สำหรับการจำลองคอมพิวเตอร์ของคุณให้เป็นเซิร์ฟเวอร์ และรันไฟล์ PHP ผ่านเว็บบราวน์เซอร์ คุณสามารถดาวน์โหลดได้ที่ <a href="https://www.apachefriends.org/download.html"><b>https://www.apachefriends.org/download.html<b></b></a></p>
+              <img src="img/download2.png" alt="">
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+    
+
+
+
+
+  <!-- footer -->
+
+<div class="container-fuild">
+    <footer class="footer">
+      <p>© Copyrights. All rights reserved.</p>
+    </footer>
+</div>
+  
+
+  
+
+
+    
+
+
+    
+</body>
+</html>
